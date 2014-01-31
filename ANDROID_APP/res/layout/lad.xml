@@ -1,0 +1,112 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:paddingTop="25dp"
+    android:orientation="vertical" 
+    android:layout_gravity="center"
+    
+    android:background="#66ccff">
+    
+    <ImageView 
+        android:id="@+id/cloud1"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/cloud"
+        android:paddingLeft="170dp"
+        android:paddingTop="30dp"
+        android:src="@drawable/cloud"
+        />
+    <ImageView 
+        android:id="@+id/cloud2"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/cloud"
+        android:paddingLeft="200dp"
+        android:paddingTop="50dp"
+        android:src="@drawable/cloud"
+        />
+	<ImageView 
+        android:id="@+id/cloud3"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/cloud"
+        android:paddingTop="50dp"
+        android:src="@drawable/cloud"
+        />
+	<ImageView 
+        android:id="@+id/cloud4"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:contentDescription="@string/cloud"
+        android:paddingLeft="50dp"
+        android:paddingTop="10dp"
+        android:src="@drawable/cloud"
+        />
+
+    <LinearLayout
+        android:id="@+id/ll1"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_centerHorizontal="true"
+        android:layout_centerVertical="true"
+        android:layout_marginTop="30dp"
+        android:orientation="vertical" >
+
+        <ImageButton
+            android:id="@+id/imageButton11"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:src="@drawable/ladtwo" />
+        
+         <ImageButton
+            android:id="@+id/imageButton22"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:paddingTop="40dp"
+            android:src="@drawable/ladtwo" />
+         
+         <ImageButton
+            android:id="@+id/imageButton33"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:paddingTop="40dp"
+            android:src="@drawable/ladtwo" />
+         
+         <ImageButton
+            android:id="@+id/imageButton44"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:paddingTop="40dp"
+            android:src="@drawable/ladtwo" />
+         <Button 
+              android:id="@+id/button11"
+             android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+           
+            android:text="Okay"
+             />
+        
+    </LinearLayout>
+    
+     <Button
+             android:id="@+id/newpat"
+             android:layout_width="wrap_content"
+             android:layout_height="wrap_content"
+             android:layout_alignParentBottom="true"
+             android:text="new pattern" />
+
+     <Button
+         android:id="@+id/chanpassd"
+         android:layout_width="wrap_content"
+         android:layout_height="wrap_content"
+         android:layout_alignParentBottom="true"
+         android:layout_alignParentRight="true"
+         android:text="Change pattern" />
+
+</RelativeLayout>
