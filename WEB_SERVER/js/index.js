@@ -1,0 +1,29 @@
+document.ready=function(){
+    $("#regTabs").tabs();
+    $("#regTabs").dialog({
+      autoOpen:false,
+      show:{
+        effect:"blind",duration:500
+      },
+      hide:{
+        effect:"blind",duration:500
+      },
+	  modal:true,height:600,width:600
+  });
+	 $("#loginForm").dialog({
+      autoOpen:false,
+      show:{
+        effect:"blind",duration:500
+      },
+      hide:{
+        effect:"blind",duration:500
+      },
+	  modal:true,height:350,width:500
+  });
+    $("#registerBtn").click(function(){
+      $("#regTabs").dialog("open");
+  });
+    $("#loginBtn").click(function(){
+      $("#loginForm").dialog("open");
+  });
+};

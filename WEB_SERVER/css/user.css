@@ -1,0 +1,29 @@
+#content{
+	position:absolute;
+	left:10%;
+	top:10%; 
+	width:80%;
+	height:auto;
+}
+#logout{
+	position:absolute;
+	top:8%;
+	right:10%;
+}
+#details{
+	position:absolute;
+	top:50%;
+	left:40%;
+}
+#dbcarddet{
+	position:absolute;
+	bottom:15%;
+	width:80%;
+	left:10%;
+	height:auto;
+}
+#referurlbtn{
+	position:absolute;
+	bottom:40%;
+	left:43%;
+}
