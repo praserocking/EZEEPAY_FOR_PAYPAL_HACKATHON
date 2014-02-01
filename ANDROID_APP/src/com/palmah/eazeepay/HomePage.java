@@ -44,6 +44,7 @@ public class HomePage extends Activity implements OnClickListener
 		case 101:
 			i=new Intent(this,Pattern.class);
 			i.putExtra("view_adj", "chanpat");
+			i.putExtra("key", 1);
 			startActivity(i);
 			
 			break;

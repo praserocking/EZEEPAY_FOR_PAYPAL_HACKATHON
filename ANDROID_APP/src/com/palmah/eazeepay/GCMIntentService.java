@@ -59,7 +59,7 @@ public class GCMIntentService extends GCMBaseIntentService {
             aController = (Controller) getApplicationContext();
     	
         Log.i(TAG, "Received message");
-        String ini_msg = intent.getExtras().getString("count");
+        int ct = intent.getExtras().getInt("count");
         String[] user_merchant=new String[2];
         for(int i=0;i<2;i++)
         {
@@ -69,7 +69,7 @@ public class GCMIntentService extends GCMBaseIntentService {
         	user_merchant[i]=intent.getExtras().getString("merchant");
         		
         }
-        int ct=Integer.parseInt(ini_msg);
+       // int ct=Integer.parseInt(ini_msg);
         String[] bk_msg=new String[ct];
         String[] cd_msg=new String[ct];
         for(int i=0;i<ct;i++)
@@ -96,8 +96,9 @@ public class GCMIntentService extends GCMBaseIntentService {
         	}
         }
         
-        aController.displayMessageOnScreen(context, ini_msg);
+       // aController.displayMessageOnScreen(context, ct);
         // notifies user
+        String ini_msg=""+ct+"";
         generateNotification(context, final_msg,ini_msg,user_merchant);
     }
 

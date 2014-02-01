@@ -4,7 +4,7 @@ require_once "utilities.php";
 $user=$_POST['user'];
 $pass=$_POST['pass'];
 $usertype="null";
-$final_pass=md5($pass."@ezeepay");
+$final_pass=md5($user.$pass."@ezeepay");
 $util=new utilities();
 $conn=$util->connect_db();
 $result=$conn->query("select pass from master_user where username='$user'");

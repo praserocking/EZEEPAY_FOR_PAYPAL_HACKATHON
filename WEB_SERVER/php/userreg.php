@@ -17,7 +17,7 @@ if($pass!=$repass){
 	echo"<script>alert('Passwords doesnot match!');history.back();</script>";
 }
 else{
-	$final_pass=md5($pass."@ezeepay");
+	$final_pass=md5($user.$pass."@ezeepay");
 	$uid=strrev($final_pass);
 	$query="insert into master_user values('$name','$mail','$user','$final_pass','$uid','$notset','$notset')";
 	$conn->query($query);

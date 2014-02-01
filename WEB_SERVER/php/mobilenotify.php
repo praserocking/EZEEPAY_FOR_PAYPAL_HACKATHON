@@ -16,6 +16,5 @@ while($temp=$bankdetails->fetch_array()){
 $msg=array("user"=>$userID);
 $msg=array("merchant"=>$merchantID);
 $response=sendGCMNotification(array($userDevID),$msg);
-$temp=json_decode($response);
-echo $temp["success"];
+echo $response;
 ?>

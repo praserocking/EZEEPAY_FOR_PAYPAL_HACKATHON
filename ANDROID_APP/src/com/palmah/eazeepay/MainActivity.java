@@ -18,7 +18,7 @@ public class MainActivity extends Activity {
 	// label to display gcm messages
 	TextView lblMessage;
 	Controller aController;
-	int resid=0;
+	int resid=1;
 	
 	// Asyntask
 	AsyncTask<Void, Void, Void> mRegisterTask;
@@ -133,6 +133,7 @@ public class MainActivity extends Activity {
 				else
 				{
 					Toast.makeText(getApplicationContext(), "Username&Password Mismatch", Toast.LENGTH_SHORT).show();
+					finish();
 					
 				}
 		}

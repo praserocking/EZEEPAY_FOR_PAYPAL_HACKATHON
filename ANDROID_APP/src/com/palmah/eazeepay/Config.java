@@ -4,7 +4,7 @@ public interface Config {
 
 	
 	// CONSTANTS
-	static final String YOUR_SERVER_URL =  "http://www.prassi.comuv.com/php/onetimereg.php";
+	static final String YOUR_SERVER_URL =  "http://10.0.2.2/HACKATHON-PayPal/php/onetimereg.php";
 	// YOUR_SERVER_URL : Server url where you have placed your server files
     // Google project id
     static final String GOOGLE_SENDER_ID = "432292994420";  // Place here your Google project id

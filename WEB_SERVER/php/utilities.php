@@ -59,7 +59,7 @@ class user_functions extends utilities{
 	}
 	public function getUserMobile($user){
 		$conn=self::connect_db();
-		$query="SELECT devid from master_user where username='$user'";
+		$query="SELECT devname from master_user where username='$user'";
 		$result=$conn->query($query);
 		$temp=$result->fetch_array();
 		if($temp[0]=="undefined")

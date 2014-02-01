@@ -48,11 +48,17 @@ public class Pattern extends Activity implements OnClickListener
 		chanpassd.setVisibility(View.INVISIBLE);
 		newpattern.setVisibility(View.INVISIBLE);
 		change_passd=getIntent().getExtras().getString("view_adj");
-		bank=getIntent().getExtras().getString("bank");
-		creditcard=getIntent().getExtras().getString("card");
-		String[] t=getIntent().getExtras().getStringArray("user_merchant");
-		user=t[0];
-		merchant=t[1];
+		int key=getIntent().getExtras().getInt("key");
+		if(key==2)
+		{
+			bank=getIntent().getExtras().getString("bank");
+			creditcard=getIntent().getExtras().getString("card");
+			String[] t=getIntent().getExtras().getStringArray("user_merchant");
+			user=t[0];
+			merchant=t[1];
+		}
+		
+		
 		initialize();
 		Log.d("qqqqqqqqqqqqqqqqq","wwwwwwwwwwwwwwwwwwwww");
 		if(change_passd.equals("chanpat"))
@@ -293,7 +299,7 @@ public class Pattern extends Activity implements OnClickListener
     	 
        //Log.i(Config.TAG, "registering device (regId = " + regId + ")");
         
-        String serverUrl = "http://www.prassi.comuv.com/php/mobileconfirm.php";
+        String serverUrl = "http://10.0.2.2/HACKATHON-PayPal/php/mobileconfirm.php";
         
         Map<String, String> params = new HashMap<String, String>();
         params.put("bank", bank);

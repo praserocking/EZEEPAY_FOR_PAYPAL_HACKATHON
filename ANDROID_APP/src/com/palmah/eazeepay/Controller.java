@@ -26,6 +26,7 @@ import android.net.ConnectivityManager;
 import android.net.NetworkInfo;
 import android.os.PowerManager;
 import android.util.Log;
+import android.widget.Toast;
 
 public class Controller extends Application{
 	
@@ -65,6 +66,18 @@ public class Controller extends Application{
                 
                 // Post registration values to web server
                 res= post(serverUrl, params);
+               /* if(res==1)
+                {
+                	Toast.makeText(getApplicationContext(), "Successfully Registered", Toast.LENGTH_LONG).show();
+                	return 1;
+                }
+                else
+                {
+                	Toast.makeText(getApplicationContext(), "mismatch", Toast.LENGTH_LONG).show();
+                	return 0;
+                }*/
+                String t=""+res+"";
+                Log.d("aaaaaaaaaaaaaaaaaaaaaaaaaaa",t);
                
             	 
                 
@@ -122,7 +135,7 @@ public class Controller extends Application{
         params.put("regId", regId);
         
         try {
-            post(serverUrl, params);
+              post(serverUrl, params);
             GCMRegistrar.setRegisteredOnServer(context, false);
             String message = context.getString(R.string.server_unregistered);
             displayMessageOnScreen(context, message);
@@ -203,11 +216,13 @@ public class Controller extends Application{
             while((input=br.readLine())!=null)
             {
             	Log.d("dddddddddddddddddddddddddd", input);
+            	 if(input.contains("success"))
+                 {
+                 	return 1;
+                 }
+            	
             }
-            if(input.equalsIgnoreCase("success"))
-            {
-            	return 1;
-            }
+           
             br.close();
             
             // If response is not success

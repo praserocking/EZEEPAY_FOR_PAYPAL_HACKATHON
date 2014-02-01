@@ -27,15 +27,14 @@ $msg=array(
 	"customerUID"=>$user
 	);
 $ch=curl_init();
-$postmsg=json_encode($msg);
 $headers = array("Content-Type:"."application/json","Provider:"."EZEEPAY");
 curl_setopt( $ch, CURLOPT_HTTPHEADER,$headers ); 
 curl_setopt( $ch, CURLOPT_URL,$referurl);
 curl_setopt( $ch, CURLOPT_SSL_VERIFYHOST,1);
 curl_setopt( $ch, CURLOPT_SSL_VERIFYPEER,1);
 curl_setopt( $ch, CURLOPT_RETURNTRANSFER, true );
-curl_setopt( $ch, CURLOPT_POSTFIELDS,$postmsg);
+curl_setopt( $ch, CURLOPT_POSTFIELDS,$msg);
 $response=curl_exec($ch);
 curl_close($ch);
-echo $response;
+if($response!=FALSE)echo "success";
 ?>
